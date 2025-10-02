@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - The Spike</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        .logo {
+            width: 110px;
+            height: 110px;
+            background-color: #18183a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            margin: 24px auto 8px auto;
+            border: 4px solid #ffb347;
+        }
+        .logo img {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 96px;
+            height: 96px;
+        }
+        .cabecalho {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0 auto 24px auto;
+            border: 2px solid #ffb347;
+            border-radius: 10px;
+            padding: 12px 0;
+            background: #18183a;
+            color: #fff;
+            max-width: 500px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .cabecalho a {
+            color: #ffb347;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .cabecalho a:hover {
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 32px auto;
+            background: #23234a;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 24px;
+        }
+        .container img {
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto 16px auto;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        .container p, .container ul {
+            color: #fff;
+            font-size: 1.08em;
+        }
+        body {
+            background: linear-gradient(135deg, #18183a 60%, #400557 100%);
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot_Vanguard">
+    </div>
+    <div class="cabecalho">
+        <a href="index.html" title="Home"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">home_app_logo</span></a>
+        <a href="Galeria.html" title="Galeria"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">photo_library</span></a>
+        <a href="music.html" title="Music"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">music_note</span></a>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Ch=900%2Cq=85%2Cw=1600/wp-content/uploads/clove-valorant.png" alt="Clove Valorant">
+            <div class="card-title">Clove Valorant</div>
+            <div class="card-desc">Personagem do jogo Valorant, especialista em desorientar inimigos e ressuscitar após a morte.</div>
+            <div class="card-shop">
+                <h3>Loja da Clove</h3>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="margin-bottom:10px;">
+                        <span>Spray Clove - R$ 9,90</span>
+                        <button style="margin-left:10px;">Comprar</button>
+                    </li>
+                    <li style="margin-bottom:10px;">
+                        <span>Chaveiro Clove - R$ 14,90</span>
+                        <button style="margin-left:10px;">Comprar</button>
+                    </li>
+                    <li>
+                        <span>Adesivo Clove - R$ 4,90</span>
+                        <button style="margin-left:10px;">Comprar</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     <div>
+        <button onclick="window.location.href='index.html'">Voltar </button>
+     </div>
+</body>
+</html>

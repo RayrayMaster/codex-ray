@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Clove MacAlister</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #18183a 60%, #400557 100%);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .logo {
+            width: 110px;
+            height: 110px;
+            background-color: #18183a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            margin: 24px auto 8px auto;
+            border: 4px solid #ffb347;
+        }
+        
+        .logo img {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 96px;
+            height: 96px;
+        }
+        
+        .cabecalho {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0 auto 24px auto;
+            border: 2px solid #ffb347;
+            border-radius: 10px;
+            padding: 12px 0;
+            background: #18183a;
+            color: #fff;
+            max-width: 500px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .cabecalho a {
+            color: #ffb347;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        
+        .cabecalho a:hover {
+            color: #fff;
+        }
+        
+        .page-title {
+            text-align: center;
+            color: #ffb347;
+            font-family: Arial, sans-serif;
+            margin-top: 0;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+            font-size: 2.2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 32px auto;
+            background: #23234a;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ffb347, #ffcc33, #ffb347);
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        
+        .profile-image {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .profile-image img {
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .profile-name {
+            color: #ffb347;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffb347;
+            padding-bottom: 8px;
+        }
+        
+        .profile-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .detail-item i {
+            color: #ffb347;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #3a3a6a;
+        }
+        
+        .section-title {
+            color: #ffb347;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        .section-content {
+            padding-left: 10px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid #ffb347;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffb347;
+        }
+        
+        .timeline-date {
+            color: #ffb347;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: #2d2d5a;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #ffb347;
+        }
+        
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffb347;
+        }
+        
+        .warning-box {
+            background: #5a1a1a;
+            border: 2px solid #ff3333;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .warning-title {
+            color: #ff6666;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-title i {
+            margin-right: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            background: #2d2d5a;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffb347;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: #18183a;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://i.pinimg.com/736x/23/6d/29/236d29a73db5e66e680ba39dcc64580f.jpg" alt="Clove MacAlister">
+    </div>
+    
+    <h1 class="page-title">CURRÍCULO PROFISSIONAL</h1>
+    
+    <div class="cabecalho">
+        <a href="#perfil" title="Perfil"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">person</span></a>
+        <a href="#experiencia" title="Experiência"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">work</span></a>
+        <a href="#habilidades" title="Habilidades"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">psychology</span></a>
+        <a href="#historico" title="Histórico"><span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">history</span></a>
+    </div>
+    
+    <div class="container">
+        <section id="perfil" class="section">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://i.pinimg.com/736x/23/6d/29/236d29a73db5e66e680ba39dcc64580f.jpg" alt="Clove MacAlister">
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Clove MacAlister</h2>
+                    <p>Profissional visionária com expertise em gestão estratégica e expansão de mercado no setor alimentício. Combinando habilidades de liderança excepcionais com uma abordagem inovadora para negócios.</p>
+                    
+                    <div class="profile-details">
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <span>22 anos</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-passport"></i>
+                            <span>Nacionalidade Escocesa</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Edimburgo, Escócia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>CEO & Estrategista</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bullseye"></i> Objetivo Profissional</h2>
+            <div class="section-content">
+                <p>Atuar como CEO em empresas do setor alimentício, implementando estratégias inovadoras para otimização de processos, gestão de equipes e expansão de mercado, com foco em sustentabilidade e impacto social positivo.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2024</div>
+                    <div class="timeline-title">MBA em Gestão Estratégica de Negócios Alimentícios</div>
+                    <div>University College London (UCL)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-title">Bacharelado em Administração de Empresas</div>
+                    <div>Universidade de Edimburgo</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experiencia" class="section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">Outubro 2022 - Presente</div>
+                    <div class="timeline-title">Diretora de Expansão e Estratégias de Mercado</div>
+                    <div>Scotia Flavors — Edimburgo, Escócia</div>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Liderou a introdução de uma linha de produtos orgânicos para o mercado escocês, aumentando o faturamento anual em 30%</li>
+                        <li>Negociou parcerias estratégicas com fornecedores locais, garantindo sustentabilidade em toda a cadeia de produção</li>
+                        <li>Desenvolveu campanhas publicitárias que aumentaram a fidelidade de clientes em 45%</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Junho 2021 - Agosto 2022</div>
+                    <div class="timeline-title">Fundadora e CEO</div>
+                    <div>MacAlister Foods — Start-up de snacks artesanais saudáveis</div>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Criou uma linha de lanches saudáveis baseados em receitas tradicionais escocesas</li>
+                        <li>Expandiu a operação da start-up para 15 pontos de venda em 12 meses</li>
+                        <li>Implementou um programa de responsabilidade social, direcionando 10% dos lucros para apoiar comunidades locais</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="historico" class="section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Histórico Extraordinário</h2>
+            <div class="section-content">
+                <p>Jovem Agente Imortal: Clove possui uma habilidade única de ressuscitar após sua morte, tornando-a virtualmente indestrutível.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Mortes Reportadas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Taxa de Recuperação</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24-48h</div>
+                        <div class="stat-label">Tempo de Retorno</div>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 15px 0 10px 0; color: #ffb347;">Detalhes das Mortes:</h3>
+                <ul style="padding-left: 20px;">
+                    <li>Tiros: 3 ocasiões (incluindo emboscadas e operações mal-sucedidas)</li>
+                    <li>Envenenamento: 2 vezes, devido a exposição a substâncias tóxicas em missões experimentais</li>
+                    <li>Explosões: 2 vezes, ao proteger civis em áreas críticas</li>
+                    <li>Acidente durante treinamento: 1 vez, por falha no equipamento de segurança</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="habilidades" class="section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Habilidades e Competências</h2>
+            <div class="section-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Gestão de Equipes</div>
+                        <div>Capacidade comprovada de liderar equipes multifuncionais em ambientes desafiadores</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Marketing Criativo</div>
+                        <div>Desenvolvimento de campanhas de impacto com forte apelo emocional e cultural</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Análise de Mercado</div>
+                        <div>Habilidade em identificar tendências emergentes e oportunidades de nicho</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Negociações Estratégicas</div>
+                        <div>Expertise em fechar parcerias lucrativas com foco em sustentabilidade e inovação</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> Projetos Notáveis</h2>
+            <div class="section-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Programa "Taste of Scotland"</div>
+                        <div>Idealizou e implementou um projeto que promove alimentos regionais para exportação, alcançando mercados internacionais</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Linha "EcoSnack"</div>
+                        <div>Desenvolveu uma linha de produtos alimentícios com embalagens 100% biodegradáveis</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="warning-box">
+            <div class="warning-title"><i class="fas fa-exclamation-triangle"></i> Aviso Importante</div>
+            <p>Clove MacAlister é uma agente imortal e extremamente habilidosa. Qualquer tentativa de subestimar, desrespeitar ou interferir em suas decisões e ações será tratada como violação direta das políticas internas da empresa e poderá acarretar penalidades severas, incluindo demissões ou sanções legais. Respeito mútuo é altamente recomendado.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Currículo de Clove MacAlister &copy; 2023 - Referências disponíveis mediante solicitação</p>
+    </footer>
+</body>
+</html>

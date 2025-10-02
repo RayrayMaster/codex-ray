@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Spike - Clove</title>
+
+   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <style>
         .logo {
             width: 110px;
@@ -27,6 +30,7 @@
             width: 96px;
             height: 96px;
         }
+
         .cabecalho {
             text-align: center;
             font-family: Arial, sans-serif;
@@ -39,16 +43,37 @@
             max-width: 500px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
+
         .cabecalho a {
-            color: #ffb347;
+            color: #ffb347; 
             text-decoration: none;
             margin: 0 18px;
             font-weight: bold;
             transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
         }
         .cabecalho a:hover {
             color: #fff;
         }
+
+      
+        .cabecalho .material-symbols-outlined {
+            font-size: 1.6em;
+            vertical-align: middle;
+            color: #ffb347; /* cor padrão do ícone */
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .cabecalho a:hover .material-symbols-outlined {
+            color: #fff;
+        }
+
+       
+        .cabecalho a.active .material-symbols-outlined {
+            color: #fff;
+        }
+
         .container {
             max-width: 600px;
             margin: 32px auto;
@@ -83,21 +108,25 @@
 <div class="logo">
     <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot_Vanguard">
 </div>
+
 <h2 style="text-align:center; color:#ffb347; font-family:Arial, sans-serif; margin-top: 0; margin-bottom: 18px; letter-spacing: 1px;">THE SPIKE</h2>
 
 <div class="cabecalho">
     <a href="index.html" title="Home">
-        <span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">home_app_logo</span>
+        <span class="material-symbols-outlined">home_app_logo</span>
     </a>
+
     <a href="Galeria.html" title="Galeria">
-        <span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">photo_library</span>
+        <span class="material-symbols-outlined">photo_library</span>
     </a>
+
     <a href="music.html" title="Music">
-        <span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">music_note</span>
+        <span class="material-symbols-outlined">music_note</span>
     </a>
-    <!-- Novo link Currículo -->
+
+  
     <a href="Curriculo.html" title="Currículo">
-        <span class="material-symbols-outlined" style="font-size:1.6em;vertical-align:middle;">work</span>
+        <span class="material-symbols-outlined">work</span>
     </a>
 </div>
 
@@ -118,9 +147,9 @@
 </div>
 
 <span style="display: flex; align-items: center;">
-    <img src="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" alt="Ícone de Clove, rosto estilizado com expressão neutra, fundo transparente" height="32" width="32" style="margin-right: 8px;">
+    <img src="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" alt="Ícone de Clove" height="32" width="32" style="margin-right: 8px;">
     <strong>Clove</strong>
 </span>
-    
+
 </body>
 </html>

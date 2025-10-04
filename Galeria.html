@@ -40,6 +40,9 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         .cabecalho a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: #ffb347;
             text-decoration: none;
             margin: 0 18px;
@@ -69,6 +72,15 @@
         .container p, .container ul {
             color: #fff;
             font-size: 1.08em;
+        }
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
+            max-width: 28px;
+            max-height: 28px;
+            display: inline-block;
+            object-fit: contain;
+            border: none;
         }
         body {
             background: linear-gradient(135deg, #18183a 60%, #400557 100%);
@@ -103,7 +115,7 @@
         <a href="curriculo.html" title="Currículo">
             <span class="material-symbols-outlined">work</span>
         </a>
-        <a href="https://open.spotify.com" title="Spotify" target="_blank" style="vertical-align: middle;">
+        <a href="https://open.spotify.com" title="Spotify" target="_blank">
             <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
         </a>
 

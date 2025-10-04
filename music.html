@@ -45,6 +45,9 @@
             margin: 0 18px;
             font-weight: bold;
             transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         .cabecalho a:hover {
             color: #fff;
@@ -80,6 +83,22 @@
             margin: 0;
             padding: 0;
         }
+
+        /* normaliza/força tamanho do ícone do Spotify e evita versões grandes */
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
+            max-width: 28px;
+            max-height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+        }
+
+        /* em caso de imagens SVG com outro tamanho embutido, garantir que não fiquem grandes */
+        .cabecalho img {
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +125,7 @@
         <a href="curriculo.html" title="Currículo">
             <span class="material-symbols-outlined">work</span>
         </a>
-        <a href="https://open.spotify.com" title="Spotify" target="_blank" style="vertical-align: middle;">
+        <a href="https://open.spotify.com" title="Spotify" target="_blank">
             <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
         </a>
 

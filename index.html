@@ -52,6 +52,7 @@
             transition: color 0.2s;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
         }
         .cabecalho a:hover {
             color: #fff;
@@ -99,13 +100,18 @@
         }
         /* Spotify icon styling */
         .spotify-icon {
+            width: 28px;
             height: 28px;
+            max-width: 28px;
+            max-height: 28px;
+            display: inline-block;
+            object-fit: contain;
+            border: none;
             margin-left: 6px;
             vertical-align: middle;
             border-radius: 6px;
             background: #18183a;
             border: 2px solid #ffb347;
-            display: inline-block;
             transform: translateY(-2px);
         }
     </style>
@@ -134,8 +140,8 @@
     <a href="curriculo.html" title="Currículo">
         <span class="material-symbols-outlined">work</span>
     </a>
-    <a href="https://open.spotify.com" title="Spotify" target="_blank" style="vertical-align: middle;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" height="28" style="margin-left: 2px; margin-bottom: -4px; border-radius: 6px; background: #18183a; border: 2px solid #ffb347;" />
+    <a href="https://open.spotify.com" title="Spotify" target="_blank">
+        <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
     </a>
 
     

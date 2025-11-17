@@ -35,7 +35,6 @@
             margin: 0 auto;
         }
         
-        /* ===== LOGO CERTA (ÚNICA) ===== */
         .logo-container {
             display: flex;
             flex-direction: column;
@@ -61,7 +60,7 @@
         .logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* garante círculo perfeito sem cortar texto */
+            object-fit: cover;
             border-radius: 50%;
         }
         
@@ -85,6 +84,7 @@
         .page-title {
             text-align: center;
             color: #ffb347;
+            font-family: Arial, sans-serif;
             margin: 10px 0 20px;
             letter-spacing: 1px;
             font-size: 1.8em;
@@ -92,6 +92,7 @@
         
         .cabecalho {
             text-align: center;
+            font-family: Arial, sans-serif;
             margin: 0 auto 24px auto;
             border: 2px solid #ffb347;
             border-radius: 10px;
@@ -134,7 +135,7 @@
         }
         
         .music-desc {
-            font-size: 1.1em;
+            font-size: 1.08em;
             color: #e0e0e0;
             margin-bottom: 24px;
             line-height: 1.5;
@@ -151,6 +152,11 @@
             height: 28px;
             display: inline-block;
             vertical-align: middle;
+            border: none;
+        }
+        
+        .material-symbols-outlined {
+            font-size: 24px;
         }
         
         .footer {
@@ -163,15 +169,14 @@
         }
     </style>
 
+    <!-- Favicon com imagem da Ahri -->
     <link rel="icon" href="https://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/Ahri.png" />
 </head>
 <body>
     <div class="container">
-        
-        <!-- LOGO ÚNICA E CORRIGIDA -->
         <div class="logo-container">
             <div class="logo">
-                <img src="https://wallpapers.com/images/hd/lol-kda-official-logo-o9qb8pobgewcyfdt.jpg" alt="KDA Logo">
+                <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot Vanguard Logo">
                 <span class="logo-badge" title="Ahri">★</span>
             </div>
             <h1 class="page-title">AHRI MUSIC</h1>
@@ -199,7 +204,8 @@
             <div class="music-title">Música em Destaque</div>
             <div class="music-desc">Ouça a trilha que representa o clima de Ahri em League of Legends. Sinta a energia e a atmosfera da vastayesa da sedução enquanto joga ou relaxa!</div>
             
-            <iframe style="border-radius:12px" 
+            <!-- Player Spotify atualizado -->
+            <iframe data-testid="embed-iframe" style="border-radius:12px" 
                 src="https://open.spotify.com/embed/track/3CEW3iffD2QvNZMK20sMqW?utm_source=generator" 
                 height="352" frameBorder="0" allowfullscreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 

@@ -3,190 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahri - Perfil</title>
-
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Ahri - A Raposa de Nove Caudas</title>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #9c27b0;
+            --primary-dark: #7b1fa2;
+            --accent: #ffd740;
+            --bg-dark: #1a1a2e;
+            --bg-card: #23234a;
+            --text: #e0e0e0;
+        }
+        
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #1f012a, #3c0057);
-            color: #fff;
+            background: linear-gradient(135deg, var(--bg-dark) 60%, var(--primary-dark) 100%);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
         }
+        
         header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 50px;
-            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            background: rgba(255,255,255,0.02);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             backdrop-filter: blur(8px);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
         }
-        header .logo {
-            display: flex; align-items: center; gap: 10px;
-            text-decoration: none; color: #fff;
-        }
-        .logo-icon {
-            background: #8e24aa; border-radius: 50%;
-            width: 40px; height: 40px;
-            display: flex; justify-content: center; align-items: center;
-            font-weight: bold; font-size: 24px;
-            animation: pulse 2s infinite;
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none; color: #ddd;
-            transition: all 0.3s;
-        }
-        nav a:hover {
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
             color: #fff;
-            text-shadow: 0 0 10px #d500f9;
+            text-decoration: none;
         }
-
-        .container {
-            padding: 40px; max-width: 1200px; margin: auto;
+        
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            background: var(--primary);
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
         }
+        
+        .fox-icon {
+            font-size: 24px;
+            color: var(--accent);
+        }
+        
+        nav a {
+            color: var(--text);
+            margin-left: 16px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color .2s;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
         .page-title {
-            text-align: center; font-size: 36px; margin-bottom: 30px;
-            text-shadow: 0 0 15px #9c27b0;
+            text-align: center;
+            color: var(--accent);
+            font-family: Arial, sans-serif;
+            margin: 24px 0;
+            letter-spacing: 1px;
+            font-size: 2.2rem;
         }
+        
+        .container {
+            max-width: 900px;
+            margin: 32px auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+        }
+        
         .profile-section {
-            display: flex; gap: 40px; align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px; border-radius: 20px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            animation: fadeInUp 1.2s ease-in-out;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 30px;
+            align-items: center;
         }
+        
+        .profile-image {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
         .profile-image img {
-            width: 280px; height: 280px; border-radius: 50%; object-fit: cover;
-            box-shadow: 0 0 25px #b239ff;
-            transform: rotate(-3deg);
-            transition: transform 0.4s;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-        .profile-image img:hover {
-            transform: scale(1.05) rotate(3deg);
+        
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
         }
+        
         .profile-name {
-            font-size: 36px; margin-bottom: 10px;
-            color: #f4e5ff;
-            text-shadow: 0 0 15px #e91e63;
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 8px;
         }
-        .profile-info p {
-            margin-bottom: 20px; font-size: 16px; opacity: 0.8;
+        
+        .profile-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
         }
+        
         .detail-item {
-            display: flex; align-items: center; gap: 10px;
-            margin-bottom: 8px; font-size: 14px; opacity: 0.9;
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
         }
+        
         .detail-item i {
-            color: #ce93d8;
+            color: var(--accent);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
         }
-
-        /* Habilidades */
+        
         .section {
-            margin-top: 50px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #3a3a6a;
         }
+        
         .section-title {
-            display: flex; align-items: center; gap: 10px;
-            font-size: 28px; margin-bottom: 25px;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
         }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        .section-content {
+            padding-left: 10px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        
+        .timeline-date {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: #2d2d5a;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--accent);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            background: #2d2d5a;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+        
         .abilities-grid {
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
         }
+        
         .ability-item {
-            background: rgba(255, 255, 255, 0.06);
-            padding: 20px; border-radius: 15px; text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: #2d2d5a;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
         }
+        
         .ability-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
         }
+        
         .ability-icon {
-            font-size: 30px; margin-bottom: 10px; color: #d500f9;
-            animation: spin 3.5s linear infinite;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
         }
-
-        /* Animações */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 10px #d500f9; }
-            50% { transform: scale(1.2); box-shadow: 0 0 20px #e040fb; }
+        
+        .ability-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--accent);
         }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        
+        .warning-box {
+            background: #5a1a1a;
+            border: 2px solid #ff3333;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .warning-title {
+            color: #ff6666;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .warning-title i {
+            margin-right: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background: var(--bg-dark);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid, .stats-grid, .abilities-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- CABEÇALHO -->
     <header>
         <a href="index.html" class="logo">
-            <div class="logo-icon">A</div>
+            <div class="logo-icon">
+               <i class="fab fa-firefox-browser fox-icon"></i>
+
+            </div>
             <span>Ahri - A Raposa de Nove Caudas</span>
         </a>
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Skins</a>
-            <a href="#">Galeria</a>
+            <a href="index.html">Início</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="skins.html">Skins</a>
+            <a href="curriculo.html">Currículo</a>
         </nav>
     </header>
-
+    
+    <h1 class="page-title">PERFIL DA AHRI</h1>
+    
     <div class="container">
-        <h1 class="page-title">Perfil da Ahri</h1>
-
-        <div class="profile-section">
-            <div class="profile-image">
-                <img src="https://static.deltiasgaming.com/2025/10/2XKO-2.jpeg" alt="Ahri">
-            </div>
-            <div class="profile-info">
-                <h2 class="profile-name">Ahri</h2>
-                <p>Uma vastaya ligada à energia mística de Runeterra, Ahri é capaz de manipular emoções e essências vitais enquanto viaja em busca de seu passado.</p>
-                
-                <div class="profile-details">
-                    <div class="detail-item"><i class="fas fa-paw"></i><span>Vastaya Imortal</span></div>
-                    <div class="detail-item"><i class="fas fa-globe"></i><span>Natural de Ionia</span></div>
-                    <div class="detail-item"><i class="fas fa-map-marker-alt"></i><span>Atualmente em Runeterra</span></div>
-                    <div class="detail-item"><i class="fas fa-bolt"></i><span>Controle de Energia Mística</span></div>
+        <section id="perfil" class="section">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="https://static.deltiasgaming.com/2025/10/2XKO-2.jpeg" alt="Ahri - A Raposa de Nove Caudas">
                 </div>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-star"></i> Habilidades</h2>
-            <div class="abilities-grid">
-                <div class="ability-item">
-                    <div class="ability-icon"><i class="fas fa-fire-alt"></i></div>
-                    <h3>Orbe da Ilusão</h3>
-                    <p>Ahri lança e retorna um orbe de energia, causando dano mágico à ida e verdadeiro na volta.</p>
-                </div>
-                <div class="ability-item">
-                    <div class="ability-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Encanto</h3>
-                    <p>Lança um beijo que encanta o inimigo, obrigando-o a caminhar até ela.</p>
-                </div>
-                <div class="ability-item">
-                    <div class="ability-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>Ímpeto Espiritual</h3>
-                    <p>Ahri avança rapidamente disparando raios de energia ao redor dela.</p>
-                </div>
-                <div class="ability-item">
-                    <div class="ability-icon"><i class="fas fa-magic"></i></div>
-                    <h3>Investida da Raposa</h3>
-                    <p>Ela avança até três vezes, disparando flashes de energia em inimigos próximos.</p>
+                <div class="profile-info">
+                    <h2 class="profile-name">Ahri</h2>
+                    <p>Uma vastaya conectada à energia elemental de Runeterra, Ahri é uma raposa de nove caudas capaz de manipular as emoções de sua presa. Depois de se tornar uma figura mais compassiva, ela agora viaja em busca dos fragmentos de seu povo.</p>
+                    
+                    <div class="profile-details">
+                        <div class="detail-item">
+                            <i class="fas fa-user"></i>
+                            <span>Vastaya Imortal</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-passport"></i>
+                            <span>Nascida em Ionia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Atualmente em Ionia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Campeã de League of Legends</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bullseye"></i> Objetivo</h2>
+            <div class="section-content">
+                <p>Buscar compreender sua verdadeira natureza como vastaya e encontrar outros de sua espécie, enquanto protege Ionia de ameaças externas e internas usando suas habilidades especiais únicas.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">Era Imemorial - Presente</div>
+                    <div class="timeline-title">Mestrado em Energia Essencial e Manipulação Emocional</div>
+                    <div>Universidade Arcana de Ionia</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Últimos Séculos</div>
+                    <div class="timeline-title">Especialização em Transformação e Ilusão</div>
+                    <div>Academia das Artes Elementais de Ionia</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Atualmente</div>
+                    <div class="timeline-title">Doutorado em Ética e Controle de Poder Vastaya</div>
+                    <div>Universidade de Piltover (Programa de Intercâmbio)</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-history"></i> História</h2>
+            <div class="section-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">Tempo Imemorial</div>
+                    <div class="timeline-title">Origem como Raposa de Nove Caudas</div>
+                    <div>Nascida como uma raposa especial em Ionia, Ahri inicialmente se alimentava da essência vital de humanos para sobreviver.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Eventos Recentes</div>
+                    <div class="timeline-title">Descoberta da Humanidade</div>
+                    <div>Após acidentalmente drenar a vida de um caçador que tentou protegê-la, Ahri começou a questionar sua natureza e buscar uma forma mais compassiva de existir.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Atualmente</div>
+                    <div class="timeline-title">Busca por Identidade</div>
+                    <div>Viaja por Ionia em busca de outros vastayas e respostas sobre seu verdadeiro propósito, enquanto domina melhor suas habilidades especiais.</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades" class="section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Habilidades Especiais</h2>
+            <div class="section-content">
+                <div class="abilities-grid">
+                    <div class="ability-item">
+                        <div class="ability-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="ability-name">Orbe da Ilusão</div>
+                        <div>Ahri lança e retorna um orbe, causando dano elemental. O caminho de volta causa dano verdadeiro.</div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="ability-name">Ímpeto Espiritual</div>
+                        <div>Ahri avança e dispara raios de essência, causando dano a inimigos próximos.</div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">
+                            <i class="fas fa-kiss-wink-heart"></i>
+                        </div>
+                        <div class="ability-name">Encanto</div>
+                        <div>Ahri lança um beijo que causa dano e encanta um inimigo, fazendo-o caminhar inofensivamente em sua direção.</div>
+                    </div>
+                    <div class="ability-item">
+                        <div class="ability-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="ability-name">Investida da Raposa</div>
+                        <div>Ahri avança até três vezes enquanto dispara raios de essência contra inimigos próximos.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-trophy"></i> Estatísticas de Combate</h2>
+            <div class="section-content">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">8/10</div>
+                        <div class="stat-label">Dano Elemental</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">7/10</div>
+                        <div class="stat-label">Mobilidade</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">6/10</div>
+                        <div class="stat-label">Controle</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">5/10</div>
+                        <div class="stat-label">Dificuldade</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Fatos Interessantes</h2>
+            <div class="section-content">
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Nove Caudas</div>
+                        <div>Cada cauda de Ahri representa um aspecto diferente de sua personalidade e poder elemental.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Esfera da Essência</div>
+                        <div>Ahri carrega uma esfera que contém as memórias e essências que ela coletou ao longo dos séculos.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Conexão com Ionia</div>
+                        <div>Sua energia está intrinsecamente ligada à terra de Ionia, tornando-a mais poderosa em seu território natal.</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Transformação Humana</div>
+                        <div>Ahri pode assumir forma humana para se misturar com a sociedade, embora suas orelhas de raposa frequentemente permaneçam visíveis.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="warning-box">
+            <div class="warning-title"><i class="fas fa-exclamation-triangle"></i> Aviso Importante</div>
+            <p>Ahri é uma vastaya imortal e extremamente poderosa. Qualquer tentativa de subestimar, desrespeitar ou interferir em suas decisões e ações será tratada como violação direta das leis de Ionia e poderá acarretar penalidades severas, incluindo perda de memória, encantamento permanente ou outras consequências. Respeito mútuo é altamente recomendado.</p>
+        </div>
+        
+        <!-- Botão de voltar ao topo -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" style="color: var(--accent); text-decoration: none; display: inline-flex; align-items: center;">
+                <span class="material-symbols-outlined" style="margin-right: 8px;">arrow_upward</span>
+                Voltar ao Topo
+            </a>
+        </div>
     </div>
-
+    
+    <footer>
+        <p>Perfil de Ahri &copy; 2025 - Baseado no universo de League of Legends da Riot Games</p>
+    </footer>
 </body>
 </html>

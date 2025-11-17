@@ -125,6 +125,7 @@
             padding: 32px 24px 24px 24px;
             text-align: center;
             margin-bottom: 30px;
+            border: 2px solid #ffb347;
         }
         
         .music-title {
@@ -166,6 +167,91 @@
             font-size: 0.9em;
             border-top: 1px solid #333355;
             margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+
+            .cabecalho {
+                max-width: 100%;
+                padding: 10px 0;
+            }
+
+            .cabecalho a {
+                margin: 0 12px;
+            }
+
+            .music-container {
+                padding: 24px 16px 16px 16px;
+            }
+
+            .music-title {
+                font-size: 1.3em;
+            }
+
+            .music-desc {
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+                margin: 8px auto;
+            }
+
+            .page-title {
+                font-size: 1.2rem;
+                margin: 8px 0 16px 0;
+            }
+
+            .cabecalho {
+                padding: 8px 0;
+                margin: 0 auto 16px auto;
+            }
+
+            .cabecalho a {
+                margin: 0 10px;
+            }
+
+            .music-container {
+                padding: 20px 12px 12px 12px;
+                border-radius: 12px;
+            }
+
+            .music-title {
+                font-size: 1.2em;
+            }
+
+            .music-desc {
+                font-size: 0.9em;
+                margin-bottom: 16px;
+            }
+
+            iframe {
+                height: 280px !important;
+            }
+
+            .footer {
+                font-size: 0.8em;
+                padding: 12px;
+            }
         }
     </style>
 

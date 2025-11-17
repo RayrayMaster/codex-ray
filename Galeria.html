@@ -7,12 +7,18 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background: linear-gradient(135deg, #2e004f, #ffb6e6);
             color: #fff7fa;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .logo {
@@ -26,6 +32,7 @@
             margin: 24px auto 8px auto;
             border: 4px solid #ff80bf;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
         .logo img {
@@ -33,6 +40,33 @@
             border: 3px solid #fff;
             width: 96px;
             height: 96px;
+            object-fit: cover;
+        }
+
+        .logo-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #5b007c;
+            color: #ff80bf;
+            border: 2px solid #ff80bf;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 14px;
+            line-height: 1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #ff80bf;
+            font-family: Arial, sans-serif;
+            margin: 16px 0 20px 0;
+            letter-spacing: 1px;
+            font-size: 1.8rem;
         }
 
         .cabecalho {
@@ -55,15 +89,16 @@
             text-decoration: none;
             margin: 0 18px;
             font-weight: bold;
-            transition: color 0.2s;
+            transition: all 0.2s;
         }
 
         .cabecalho a:hover {
             color: #fff;
+            transform: scale(1.1);
         }
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 32px auto;
             background: rgba(255, 214, 244, 0.1);
             border-radius: 12px;
@@ -71,63 +106,210 @@
             box-shadow: 0 4px 12px rgba(255, 128, 191, 0.4);
         }
 
-        .container img {
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 214, 244, 0.15);
             border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #ff80bf;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(255, 128, 191, 0.6);
+        }
+
+        .card img {
+            border-radius: 8px 8px 0 0;
             display: block;
-            margin: 0 auto 16px auto;
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
-            border: 3px solid #ffe6f5;
+        }
+
+        .card-content {
+            padding: 16px;
         }
 
         .card-title {
             color: #ff80bf;
             font-size: 1.4em;
-            text-align: center;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
         .card-desc {
-            text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #ffe6f5;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
 
         .card-shop h3 {
             color: #ff80bf;
-            text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .card-shop ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-shop li {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
         }
 
         button {
-            background: #ff80bf;
+            background: linear-gradient(135deg, #ff80bf, #ff99cd);
             color: #2e004f;
             border: none;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            transition: background 0.2s;
+            transition: all 0.2s;
         }
 
         button:hover {
-            background: #ff99cd;
+            background: linear-gradient(135deg, #ff99cd, #ffb3db);
+            transform: scale(1.05);
         }
 
         .spotify-icon {
             width: 28px;
             height: 28px;
         }
+
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-button button {
+            padding: 10px 24px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 16px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .logo img {
+                width: 76px;
+                height: 76px;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .cabecalho {
+                max-width: 100%;
+                padding: 10px 0;
+            }
+
+            .cabecalho a {
+                margin: 0 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                margin: 12px auto 6px auto;
+            }
+
+            .logo img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .page-title {
+                font-size: 1.2rem;
+                margin: 10px 0 16px 0;
+            }
+
+            .cabecalho {
+                padding: 8px 0;
+            }
+
+            .cabecalho a {
+                margin: 0 8px;
+                font-size: 0.85rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                border-radius: 10px;
+            }
+
+            .card img {
+                border-radius: 8px 8px 0 0;
+                height: 180px;
+            }
+
+            .card-content {
+                padding: 12px;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-desc, .card-shop li {
+                font-size: 0.85rem;
+            }
+
+            button {
+                padding: 5px 10px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="logo">
-        <img src="https://i.imgur.com/aTvkzIl.png" alt="Ahri">
+        <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot Vanguard">
+        <span class="logo-badge" title="Vanguard">★</span>
     </div>
 
-    <h2 style="text-align:center; color:#ff80bf; font-family:Arial, sans-serif; margin-top: 0;">K/DA - Ahri</h2>
+    <h2 class="page-title">K/DA - GALERIA AHRI</h2>
 
     <div class="cabecalho">
         <a href="index.html" title="Home">
@@ -152,32 +334,86 @@
     </div>
 
     <div class="container">
-        <div class="card">
-            <img src="https://cdnb.artstation.com/p/assets/images/images/041/760/396/large/yangyang-ren-kda-ahri.jpg?1632490595" alt="K/DA Ahri">
-            <div class="card-title">K/DA Ahri</div>
-            <div class="card-desc">Ahri é a líder carismática do grupo musical fictício K/DA no universo de League of Legends.</div>
-            <div class="card-shop">
-                <h3>Merch Ahri</h3>
-                <ul style="list-style:none; padding:0; margin:0;">
-                    <li style="margin-bottom:10px;">
-                        <span>Poster Ahri - R$ 19,90</span>
-                        <button style="margin-left:10px;">Comprar</button>
-                    </li>
-                    <li style="margin-bottom:10px;">
-                        <span>Chaveiro Ahri - R$ 14,90</span>
-                        <button style="margin-left:10px;">Comprar</button>
-                    </li>
-                    <li>
-                        <span>Camisa K/DA - R$ 39,90</span>
-                        <button style="margin-left:10px;">Comprar</button>
-                    </li>
-                </ul>
+        <div class="gallery-grid">
+            <div class="card">
+                <img src="https://cdnb.artstation.com/p/assets/images/images/041/760/396/large/yangyang-ren-kda-ahri.jpg?1632490595" alt="K/DA Ahri - Artwork">
+                <div class="card-content">
+                    <div class="card-title">K/DA Ahri</div>
+                    <div class="card-desc">Ahri é a líder carismática do grupo musical fictício K/DA no universo de League of Legends. Uma vastaya transformada em idol de sucesso.</div>
+                    <div class="card-shop">
+                        <h3>Merch Ahri</h3>
+                        <ul>
+                            <li>
+                                <span>Poster Ahri - R$ 19,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Chaveiro Ahri - R$ 14,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Camisa K/DA - R$ 39,90</span>
+                                <button>Comprar</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/1590432226649-HB9D8B0QDNVLJ3BBYCBO/2XKO_Social_400x400_ProfilePicture_AHRI_A.png?format=1500w" alt="KDA Ahri - Visual">
+                <div class="card-content">
+                    <div class="card-title">Ahri - K/DA ALL OUT</div>
+                    <div class="card-desc">Personagem icônica da série K/DA, representando a fusão perfeita entre poder místico e performance artística em um único corpo.</div>
+                    <div class="card-shop">
+                        <h3>Colecionáveis</h3>
+                        <ul>
+                            <li>
+                                <span>Action Figure - R$ 79,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Estatueta PVC - R$ 59,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Box Set Completo - R$ 149,90</span>
+                                <button>Comprar</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/1590432226752-5KVMJPNM7J6WE8TUVL5I/League_of_Legends_K_DA_Ahri_HD_Wallpaper_by_Alex_Chow.jpg?format=1500w" alt="K/DA Ahri - Wallpaper">
+                <div class="card-content">
+                    <div class="card-title">K/DA Ahri - Concert</div>
+                    <div class="card-desc">Visuais incríveis de Ahri durante apresentações do K/DA. A energia e carisma da rainha das ilusões em seu auge performance.</div>
+                    <div class="card-shop">
+                        <h3>Digital</h3>
+                        <ul>
+                            <li>
+                                <span>Wallpaper 4K - R$ 9,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Screensaver Pack - R$ 19,90</span>
+                                <button>Comprar</button>
+                            </li>
+                            <li>
+                                <span>Avatar Bundle - R$ 14,90</span>
+                                <button>Comprar</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div style="text-align: center; margin: 20px;">
-        <button onclick="window.location.href='index.html'">Voltar</button>
+    <div class="back-button">
+        <button onclick="window.location.href='index.html'">← Voltar ao Início</button>
     </div>
 </body>
 </html>

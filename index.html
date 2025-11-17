@@ -30,6 +30,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
+            padding: 20px;
         }
         
         /* Logo circular - replicado do cabeçalho original */
@@ -194,121 +195,6 @@
             padding-bottom: 8px;
         }
         
-        .profile-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .detail-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .detail-item i {
-            color: var(--accent);
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #3a3a6a;
-        }
-        
-        .section-title {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .section-title i {
-            margin-right: 10px;
-        }
-        
-        .section-content {
-            padding-left: 10px;
-        }
-        
-        .timeline-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            border-left: 2px solid var(--accent);
-            position: relative;
-        }
-        
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-        
-        .timeline-date {
-            color: var(--accent);
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .timeline-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        
-        .skill-item {
-            background: #2d2d5a;
-            padding: 12px;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .skill-name {
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: var(--accent);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .stat-item {
-            background: #2d2d5a;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--accent);
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-        }
-        
         .abilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -322,6 +208,7 @@
             border-radius: 8px;
             text-align: center;
             transition: transform 0.3s;
+            border-left: 4px solid var(--accent);
         }
         
         .ability-item:hover {
@@ -340,25 +227,9 @@
             color: var(--accent);
         }
         
-        .warning-box {
-            background: #5a1a1a;
-            border: 2px solid #ff3333;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 0;
-            position: relative;
-        }
-        
-        .warning-title {
-            color: #ff6666;
+        .keyword {
+            color: var(--accent);
             font-weight: bold;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .warning-title i {
-            margin-right: 10px;
         }
         
         footer {
@@ -368,6 +239,9 @@
             background: var(--bg-dark);
             color: #aaa;
             font-size: 0.9rem;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 30px auto;
         }
         
         @media (max-width: 768px) {
@@ -376,11 +250,7 @@
                 text-align: center;
             }
             
-            .profile-details {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-grid, .stats-grid, .abilities-grid {
+            .abilities-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -389,11 +259,11 @@
 <body>
     <!-- CABEÇALHO REPLICADO DA PÁGINA ORIGINAL -->
     <div class="logo">
-        <img src="https://static.deltiasgaming.com/2025/10/2XKO-2.jpeg" alt="Ahri - A Raposa de Nove Caudas">
+        <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/6b9f6c56-0b02-4164-81e9-af36253f4dc6/2XKO_Social_400x400_ProfilePicture_AHRI_A.png" alt="Ahri - A Raposa de Nove Caudas">
         <span class="logo-badge" title="Stareeg">★</span>
     </div>
 
-    <h2 style="text-align:center; color:#ffb347; font-family:Arial, sans-serif; margin-top: 0; margin-bottom: 18px; letter-spacing: 1px;">AHRI - A RAPOSA DE NOVE CAUDAS</h2>
+    <h2 class="page-title">AHRI - A RAPOSA DE NOVE CAUDAS</h2>
 
     <div class="cabecalho">
         <a href="index.html" title="Home">
@@ -417,187 +287,64 @@
     </div>
     
     <div class="container">
-        <section id="perfil" class="section">
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="https://static.deltiasgaming.com/2025/10/2XKO-2.jpeg" alt="Ahri - A Raposa de Nove Caudas">
-                </div>
-                <div class="profile-info">
-                    <h2 class="profile-name">Ahri</h2>
-                    <p>Uma vastaya conectada à energia elemental de Runeterra, Ahri é uma raposa de nove caudas capaz de manipular as emoções de sua presa. Depois de se tornar uma figura mais compassiva, ela agora viaja em busca dos fragmentos de seu povo.</p>
-                    
-                    <div class="profile-details">
-                        <div class="detail-item">
-                            <i class="fas fa-user"></i>
-                            <span>Vastaya Imortal</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-passport"></i>
-                            <span>Nascida em Ionia</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Atualmente em Ionia</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Campeã de League of Legends</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/6b9f6c56-0b02-4164-81e9-af36253f4dc6/2XKO_Social_400x400_ProfilePicture_AHRI_A.png" alt="Ahri - A Raposa de Nove Caudas">
             </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-bullseye"></i> Objetivo</h2>
-            <div class="section-content">
-                <p>Buscar compreender sua verdadeira natureza como vastaya e encontrar outros de sua espécie, enquanto protege Ionia de ameaças externas e internas usando suas habilidades especiais únicas.</p>
+            <div class="profile-info">
+                <h2 class="profile-name">Ahri</h2>
+                <p>Ela é uma <span class="keyword">vastaya</span> com traços de <span class="keyword">raposa</span>, capaz de perceber e influenciar as emoções de quem enfrenta e de absorver a <span class="keyword">energia vital</span> dessas pessoas, tomando para si fragmentos de suas <span class="keyword">memórias</span> e sensações.</p>
+                <p>Antes vista como uma caçadora poderosa e indomável, Ahri agora percorre o mundo em busca de sinais de seus antepassados, tentando substituir as lembranças que tomou de outros por experiências genuínas criadas por ela mesma.</p>
             </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
-            <div class="section-content">
-                <div class="timeline-item">
-                    <div class="timeline-date">Era Imemorial - Presente</div>
-                    <div class="timeline-title">Mestrado em Energia Essencial e Manipulação Emocional</div>
-                    <div>Universidade Arcana de Ionia</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Últimos Séculos</div>
-                    <div class="timeline-title">Especialização em Transformação e Ilusão</div>
-                    <div>Academia das Artes Elementais de Ionia</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Atualmente</div>
-                    <div class="timeline-title">Doutorado em Ética e Controle de Poder Vastaya</div>
-                    <div>Universidade de Piltover (Programa de Intercâmbio)</div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-history"></i> História</h2>
-            <div class="section-content">
-                <div class="timeline-item">
-                    <div class="timeline-date">Tempo Imemorial</div>
-                    <div class="timeline-title">Origem como Raposa de Nove Caudas</div>
-                    <div>Nascida como uma raposa especial em Ionia, Ahri inicialmente se alimentava da essência vital de humanos para sobreviver.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Eventos Recentes</div>
-                    <div class="timeline-title">Descoberta da Humanidade</div>
-                    <div>Após acidentalmente drenar a vida de um caçador que tentou protegê-la, Ahri começou a questionar sua natureza e buscar uma forma mais compassiva de existir.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Atualmente</div>
-                    <div class="timeline-title">Busca por Identidade</div>
-                    <div>Viaja por Ionia em busca de outros vastayas e respostas sobre seu verdadeiro propósito, enquanto domina melhor suas habilidades especiais.</div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="habilidades" class="section">
-            <h2 class="section-title"><i class="fas fa-star"></i> Habilidades Especiais</h2>
-            <div class="section-content">
-                <div class="abilities-grid">
-                    <div class="ability-item">
-                        <div class="ability-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <div class="ability-name">Orbe da Ilusão</div>
-                        <div>Ahri lança e retorna um orbe, causando dano elemental. O caminho de volta causa dano verdadeiro.</div>
-                    </div>
-                    <div class="ability-item">
-                        <div class="ability-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="ability-name">Ímpeto Espiritual</div>
-                        <div>Ahri avança e dispara raios de essência, causando dano a inimigos próximos.</div>
-                    </div>
-                    <div class="ability-item">
-                        <div class="ability-icon">
-                            <i class="fas fa-kiss-wink-heart"></i>
-                        </div>
-                        <div class="ability-name">Encanto</div>
-                        <div>Ahri lança um beijo que causa dano e encanta um inimigo, fazendo-o caminhar inofensivamente em sua direção.</div>
-                    </div>
-                    <div class="ability-item">
-                        <div class="ability-icon">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <div class="ability-name">Investida da Raposa</div>
-                        <div>Ahri avança até três vezes enquanto dispara raios de essência contra inimigos próximos.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-trophy"></i> Estatísticas de Combate</h2>
-            <div class="section-content">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value">8/10</div>
-                        <div class="stat-label">Dano Elemental</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">7/10</div>
-                        <div class="stat-label">Mobilidade</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">6/10</div>
-                        <div class="stat-label">Controle</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">5/10</div>
-                        <div class="stat-label">Dificuldade</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-gem"></i> Fatos Interessantes</h2>
-            <div class="section-content">
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <div class="skill-name">Nove Caudas</div>
-                        <div>Cada cauda de Ahri representa um aspecto diferente de sua personalidade e poder elemental.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Esfera da Essência</div>
-                        <div>Ahri carrega uma esfera que contém as memórias e essências que ela coletou ao longo dos séculos.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Conexão com Ionia</div>
-                        <div>Sua energia está intrinsecamente ligada à terra de Ionia, tornando-a mais poderosa em seu território natal.</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">Transformação Humana</div>
-                        <div>Ahri pode assumir forma humana para se misturar com a sociedade, embora suas orelhas de raposa frequentemente permaneçam visíveis.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <div class="warning-box">
-            <div class="warning-title"><i class="fas fa-exclamation-triangle"></i> Aviso Importante</div>
-            <p>Ahri é uma vastaya imortal e extremamente poderosa. Qualquer tentativa de subestimar, desrespeitar ou interferir em suas decisões e ações será tratada como violação direta das leis de Ionia e poderá acarretar penalidades severas, incluindo perda de memória, encantamento permanente ou outras consequências. Respeito mútuo é altamente recomendado.</p>
         </div>
         
-        <!-- Botão de voltar ao topo -->
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="#" style="color: var(--accent); text-decoration: none; display: inline-flex; align-items: center;">
-                <span class="material-symbols-outlined" style="margin-right: 8px;">arrow_upward</span>
-                Voltar ao Topo
-            </a>
+        <h2 style="color: var(--accent); margin: 30px 0 15px 0; text-align: center;">HABILIDADES</h2>
+        
+        <div class="abilities-grid">
+            <div class="ability-item">
+                <div class="ability-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="ability-name">Cura por Abates</div>
+                <div>Depois de abater <span class="keyword">9 tropas ou monstros</span>, Ahri se cura. Depois de eliminar um <span class="keyword">Campeão inimigo</span>, Ahri se cura em uma quantidade ainda maior.</div>
+            </div>
+            
+            <div class="ability-item">
+                <div class="ability-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <div class="ability-name">Orbe da Ilusão</div>
+                <div>Ahri lança e puxa de volta seu orbe, causando <span class="keyword">Dano Mágico</span> na ida e <span class="keyword">Dano Verdadeiro</span> na volta.</div>
+            </div>
+            
+            <div class="ability-item">
+                <div class="ability-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="ability-name">Fogos da Raposa</div>
+                <div>Ahri recebe um breve impulso de <span class="keyword">Velocidade de Movimento</span> e lança três <span class="keyword">Fogos de Raposa</span> que perseguem e atacam inimigos próximos.</div>
+            </div>
+            
+            <div class="ability-item">
+                <div class="ability-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="ability-name">Encanto</div>
+                <div>Ahri manda um beijo que causa dano e <span class="keyword">encanta um inimigo</span>, interrompendo imediatamente qualquer habilidade de movimento em progresso e fazendo com que ele ande inofensivamente em sua direção.</div>
+            </div>
+            
+            <div class="ability-item">
+                <div class="ability-icon">
+                    <i class="fas fa-arrows-alt-h"></i>
+                </div>
+                <div class="ability-name">Ímpeto Espiritual</div>
+                <div>Ahri avança e dispara <span class="keyword">raios de essência</span>, causando dano a inimigos próximos. Ímpeto Espiritual pode ser conjurada até <span class="keyword">três vezes</span> antes de entrar em Tempo de Recarga e ganha reconjurações adicionais ao eliminar Campeões inimigos.</div>
+            </div>
         </div>
     </div>
     
     <footer>
-        <p>Documento protegido por criptografia arcana nível 9 | Acesso registrado e monitorado</p>
-        <p>Perfil de Ahri &copy; 2025 - Baseado no universo de League of Legends da Riot Games</p>
+        <p>Ahri - A Raposa de Nove Caudas &copy; 2023 - Baseado no universo de League of Legends da Riot Games</p>
     </footer>
 </body>
 </html>

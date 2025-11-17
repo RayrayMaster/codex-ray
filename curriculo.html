@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahri - A Raposa de Nove Caudas</title>
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -17,66 +18,114 @@
         :root {
             --primary: #9c27b0;
             --primary-dark: #7b1fa2;
-            --accent: #ffd740;
-            --bg-dark: #1a1a2e;
+            --accent: #ffb347;
+            --bg-dark: #18183a;
             --bg-card: #23234a;
             --text: #e0e0e0;
         }
         
         body {
-            background: linear-gradient(135deg, var(--bg-dark) 60%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--bg-dark) 60%, #400557 100%);
             color: var(--text);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
         }
         
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 24px;
-            background: rgba(255,255,255,0.02);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            backdrop-filter: blur(8px);
-        }
-        
+        /* Logo circular - replicado do cabeçalho original */
         .logo {
+            width: 110px;
+            height: 110px;
+            background-color: var(--bg-dark);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            width: 34px;
-            height: 34px;
-            display: grid;
-            place-items: center;
-            background: var(--primary);
-            border-radius: 8px;
-            color: white;
-            font-weight: 700;
-        }
-        
-        .fox-icon {
+            justify-content: center;
+            font-family: Arial, sans-serif;
             font-size: 24px;
-            color: var(--accent);
+            color: white;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            margin: 24px auto 8px auto;
+            border: 4px solid var(--accent);
+            position: relative;
         }
-        
-        nav a {
-            color: var(--text);
-            margin-left: 16px;
+        .logo img {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 96px;
+            height: 96px;
+        }
+
+        .logo-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--bg-dark);
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 14px;
+            line-height: 1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Cabeçalho - replicado do original */
+        .cabecalho {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0 auto 24px auto;
+            border: 2px solid var(--accent);
+            border-radius: 10px;
+            padding: 12px 0;
+            background: var(--bg-dark);
+            color: #fff;
+            max-width: 500px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .cabecalho a {
+            color: var(--accent);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color .2s;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        nav a:hover {
+        .cabecalho a:hover {
+            color: #fff;
+        }
+
+        .cabecalho .material-symbols-outlined {
+            font-size: 1.6em;
+            vertical-align: middle;
             color: var(--accent);
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .cabecalho a:hover .material-symbols-outlined {
+            color: #fff;
+        }
+
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
+            max-width: 28px;
+            max-height: 28px;
+            display: inline-block;
+            object-fit: contain;
+            border: none;
+            margin-left: 6px;
+            vertical-align: middle;
+            border-radius: 6px;
+            background: var(--bg-dark);
+            border: 2px solid var(--accent);
+            transform: translateY(-2px);
         }
         
         .page-title {
@@ -338,24 +387,34 @@
     </style>
 </head>
 <body>
-    <!-- CABEÇALHO -->
-    <header>
-        <a href="index.html" class="logo">
-            <div class="logo-icon">
-               <i class="fab fa-firefox-browser fox-icon"></i>
+    <!-- CABEÇALHO REPLICADO DA PÁGINA ORIGINAL -->
+    <div class="logo">
+        <img src="https://static.deltiasgaming.com/2025/10/2XKO-2.jpeg" alt="Ahri - A Raposa de Nove Caudas">
+        <span class="logo-badge" title="Stareeg">★</span>
+    </div>
 
-            </div>
-            <span>Ahri - A Raposa de Nove Caudas</span>
+    <h2 style="text-align:center; color:#ffb347; font-family:Arial, sans-serif; margin-top: 0; margin-bottom: 18px; letter-spacing: 1px;">AHRI - A RAPOSA DE NOVE CAUDAS</h2>
+
+    <div class="cabecalho">
+        <a href="index.html" title="Home">
+            <span class="material-symbols-outlined">home_app_logo</span>
         </a>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="skins.html">Skins</a>
-            <a href="curriculo.html">Currículo</a>
-        </nav>
-    </header>
-    
-    <h1 class="page-title">PERFIL DA AHRI</h1>
+
+        <a href="Galeria.html" title="Galeria">
+            <span class="material-symbols-outlined">photo_library</span>
+        </a>
+
+        <a href="music.html" title="Music">
+            <span class="material-symbols-outlined">music_note</span>
+        </a>
+
+        <a href="curriculo.html" title="Currículo">
+            <span class="material-symbols-outlined">work</span>
+        </a>
+        <a href="https://open.spotify.com" title="Spotify" target="_blank">
+            <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
+        </a>
+    </div>
     
     <div class="container">
         <section id="perfil" class="section">
@@ -539,8 +598,6 @@
     <footer>
         <p>Documento protegido por criptografia arcana nível 9 | Acesso registrado e monitorado</p>
         <p>Perfil de Ahri &copy; 2025 - Baseado no universo de League of Legends da Riot Games</p>
-        
     </footer>
 </body>
 </html>
-

@@ -3,124 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - The Spike</title>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BGXXWRR0LX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BGXXWRR0LX');
-    </script>
+    <title>Galeria - Ahri K/DA</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
+        body {
+            background: linear-gradient(135deg, #2e004f, #ffb6e6);
+            color: #fff7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .logo {
             width: 110px;
             height: 110px;
-            background-color: #18183a;
+            background-color: #5b007c;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            color: white;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
             margin: 24px auto 8px auto;
-            border: 4px solid #ffb347;
+            border: 4px solid #ff80bf;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
+
         .logo img {
             border-radius: 50%;
             border: 3px solid #fff;
             width: 96px;
             height: 96px;
         }
+
         .cabecalho {
             text-align: center;
             font-family: Arial, sans-serif;
             margin: 0 auto 24px auto;
-            border: 2px solid #ffb347;
+            border: 2px solid #ff80bf;
             border-radius: 10px;
             padding: 12px 0;
-            background: #18183a;
-            color: #fff;
+            background: #5b007c;
             max-width: 500px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(255, 128, 191, 0.5);
         }
+
         .cabecalho a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: #ffb347;
+            color: #fdd4ea;
             text-decoration: none;
             margin: 0 18px;
             font-weight: bold;
             transition: color 0.2s;
         }
+
         .cabecalho a:hover {
             color: #fff;
         }
+
         .container {
             max-width: 600px;
             margin: 32px auto;
-            background: #23234a;
+            background: rgba(255, 214, 244, 0.1);
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
             padding: 24px;
+            box-shadow: 0 4px 12px rgba(255, 128, 191, 0.4);
         }
+
         .container img {
-            border-radius: 10px;
+            border-radius: 12px;
             display: block;
             margin: 0 auto 16px auto;
             width: 120px;
             height: 120px;
             object-fit: cover;
-            border: 3px solid #fff;
+            border: 3px solid #ffe6f5;
         }
-        .container p, .container ul {
-            color: #fff;
-            font-size: 1.08em;
-        }
-        .spotify-icon {
-            width: 28px;
-            height: 28px;
-            max-width: 28px;
-            max-height: 28px;
-            display: inline-block;
-            object-fit: contain;
-            border: none;
-        }
-        body {
-            background: linear-gradient(135deg, #18183a 60%, #400557 100%);
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Estilos para os cards */
+
         .card-title {
-            color: #ffb347;
+            color: #ff80bf;
             font-size: 1.4em;
             text-align: center;
             margin-bottom: 10px;
             font-weight: bold;
         }
+
         .card-desc {
             text-align: center;
             margin-bottom: 20px;
-            color: #e0e0e0;
+            color: #ffe6f5;
         }
+
         .card-shop h3 {
-            color: #ffb347;
+            color: #ff80bf;
             text-align: center;
             margin-bottom: 15px;
         }
+
         button {
-            background: #ffb347;
-            color: #18183a;
+            background: #ff80bf;
+            color: #2e004f;
             border: none;
             padding: 5px 10px;
             border-radius: 5px;
@@ -128,21 +111,27 @@
             font-weight: bold;
             transition: background 0.2s;
         }
+
         button:hover {
-            background: #ffa347;
+            background: #ff99cd;
+        }
+
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
         }
     </style>
 </head>
 <body>
     <div class="logo">
-        <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot_Vanguard">
+        <img src="https://i.imgur.com/aTvkzIl.png" alt="Ahri">
     </div>
 
-    <h2 style="text-align:center; color:#ffb347; font-family:Arial, sans-serif; margin-top: 0; margin-bottom: 18px; letter-spacing: 1px;">THE SPIKE</h2>
+    <h2 style="text-align:center; color:#ff80bf; font-family:Arial, sans-serif; margin-top: 0;">K/DA - Ahri</h2>
 
     <div class="cabecalho">
         <a href="index.html" title="Home">
-            <span class="material-symbols-outlined">home_app_logo</span>
+            <span class="material-symbols-outlined">home</span>
         </a>
 
         <a href="Galeria.html" title="Galeria">
@@ -156,36 +145,37 @@
         <a href="curriculo.html" title="Currículo">
             <span class="material-symbols-outlined">work</span>
         </a>
+
         <a href="https://open.spotify.com" title="Spotify" target="_blank">
             <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
         </a>
     </div>
-    
+
     <div class="container">
         <div class="card">
-            <img src="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Ch=900%2Cq=85%2Cw=1600/wp-content/uploads/clove-valorant.png" alt="Clove Valorant">
-            <div class="card-title">Clove Valorant</div>
-            <div class="card-desc">Personagem do jogo Valorant, especialista em desorientar inimigos e ressuscitar após a morte.</div>
+            <img src="https://cdnb.artstation.com/p/assets/images/images/041/760/396/large/yangyang-ren-kda-ahri.jpg?1632490595" alt="K/DA Ahri">
+            <div class="card-title">K/DA Ahri</div>
+            <div class="card-desc">Ahri é a líder carismática do grupo musical fictício K/DA no universo de League of Legends.</div>
             <div class="card-shop">
-                <h3>Loja da Clove</h3>
+                <h3>Merch Ahri</h3>
                 <ul style="list-style:none; padding:0; margin:0;">
                     <li style="margin-bottom:10px;">
-                        <span>Spray Clove - R$ 9,90</span>
+                        <span>Poster Ahri - R$ 19,90</span>
                         <button style="margin-left:10px;">Comprar</button>
                     </li>
                     <li style="margin-bottom:10px;">
-                        <span>Chaveiro Clove - R$ 14,90</span>
+                        <span>Chaveiro Ahri - R$ 14,90</span>
                         <button style="margin-left:10px;">Comprar</button>
                     </li>
                     <li>
-                        <span>Adesivo Clove - R$ 4,90</span>
+                        <span>Camisa K/DA - R$ 39,90</span>
                         <button style="margin-left:10px;">Comprar</button>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    
+
     <div style="text-align: center; margin: 20px;">
         <button onclick="window.location.href='index.html'">Voltar</button>
     </div>

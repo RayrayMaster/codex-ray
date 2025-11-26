@@ -1,426 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - Ahri K/DA</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Termos de Serviço e Privacidade</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            background: linear-gradient(135deg, #2e004f, #ffb6e6);
-            color: #fff7fa;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1428 0%, #091428 100%);
+            color: #c8aa6e;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
-
-        .logo {
-            width: 110px;
-            height: 110px;
-            background-color: #5b007c;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 24px auto 8px auto;
-            border: 4px solid #ff80bf;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
             position: relative;
-        }
-
-        .logo img {
-            border-radius: 50%;
-            border: 3px solid #fff;
-            width: 96px;
-            height: 96px;
-            object-fit: cover;
-        }
-
-        .logo-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #5b007c;
-            color: #ff80bf;
-            border: 2px solid #ff80bf;
-            border-radius: 10px;
-            padding: 2px 6px;
-            font-size: 14px;
-            line-height: 1;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .page-title {
-            text-align: center;
-            color: #ff80bf;
-            font-family: Arial, sans-serif;
-            margin: 16px 0 20px 0;
-            letter-spacing: 1px;
-            font-size: 1.8rem;
-        }
-
-        .cabecalho {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0 auto 24px auto;
-            border: 2px solid #ff80bf;
-            border-radius: 10px;
-            padding: 12px 0;
-            background: #5b007c;
-            max-width: 500px;
-            box-shadow: 0 2px 10px rgba(255, 128, 191, 0.5);
-        }
-
-        .cabecalho a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #fdd4ea;
-            text-decoration: none;
-            margin: 0 18px;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        .cabecalho a:hover {
-            color: #fff;
-            transform: scale(1.1);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 32px auto;
-            background: rgba(255, 214, 244, 0.1);
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 12px rgba(255, 128, 191, 0.4);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            background: rgba(255, 214, 244, 0.15);
-            border-radius: 12px;
             overflow: hidden;
-            border: 2px solid #ff80bf;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(255, 128, 191, 0.6);
-        }
-
-        .card img {
-            border-radius: 8px 8px 0 0;
-            display: block;
+        
+        .banner-container {
+            position: relative;
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #c8aa6e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(200, 170, 110, 0.3);
+            background-image: url('https://static-cdn.jtvnw.net/jtv_user_pictures/6b76fa50-79e3-4b3a-9f6d-6520392e5134-profile_banner-480.png');
+            background-size: cover;
+            background-position: center;
         }
-
-        .card-content {
-            padding: 16px;
-        }
-
-        .card-title {
-            color: #ff80bf;
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .card-desc {
-            margin-bottom: 15px;
-            color: #ffe6f5;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-
-        .card-shop h3 {
-            color: #ff80bf;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-        }
-
-        .card-shop ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .card-shop li {
-            margin-bottom: 10px;
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 20, 40, 0.7);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            font-size: 0.9rem;
+            justify-content: center;
         }
-
-        button {
-            background: linear-gradient(135deg, #ff80bf, #ff99cd);
-            color: #2e004f;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        button:hover {
-            background: linear-gradient(135deg, #ff99cd, #ffb3db);
-            transform: scale(1.05);
-        }
-
-        .spotify-icon {
-            width: 28px;
-            height: 28px;
-        }
-
-        .back-button {
+        
+        .banner-text {
             text-align: center;
-            margin-top: 30px;
+            color: #f0e6d2;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
         }
-
-        .back-button button {
-            padding: 10px 24px;
-            font-size: 1rem;
+        
+        .banner-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
         }
-
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(200, 170, 110, 0.5);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
         @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 16px;
-            }
-
-            .logo {
-                width: 90px;
-                height: 90px;
-            }
-
-            .logo img {
-                width: 76px;
-                height: 76px;
-            }
-
-            .page-title {
-                font-size: 1.4rem;
-            }
-
-            .container {
-                padding: 16px;
-            }
-
-            .card-title {
-                font-size: 1.2rem;
-            }
-
-            .cabecalho {
-                max-width: 100%;
-                padding: 10px 0;
-            }
-
-            .cabecalho a {
-                margin: 0 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-
-            .logo {
-                width: 80px;
-                height: 80px;
-                margin: 12px auto 6px auto;
-            }
-
-            .logo img {
-                width: 70px;
-                height: 70px;
-            }
-
-            .page-title {
-                font-size: 1.2rem;
-                margin: 10px 0 16px 0;
-            }
-
-            .cabecalho {
-                padding: 8px 0;
-            }
-
-            .cabecalho a {
-                margin: 0 8px;
-                font-size: 0.85rem;
-            }
-
-            .gallery-grid {
+            .content {
                 grid-template-columns: 1fr;
             }
-
-            .card {
-                border-radius: 10px;
-            }
-
-            .card img {
-                border-radius: 8px 8px 0 0;
-                height: 180px;
-            }
-
-            .card-content {
-                padding: 12px;
-            }
-
-            .card-title {
-                font-size: 1.1rem;
-            }
-
-            .card-desc, .card-shop li {
-                font-size: 0.85rem;
-            }
-
-            button {
-                padding: 5px 10px;
-                font-size: 0.85rem;
-            }
+        }
+        
+        .section {
+            background: rgba(10, 20, 40, 0.7);
+            border: 1px solid #463714;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section h2 {
+            color: #f0e6d2;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #c8aa6e;
+        }
+        
+        .section h3 {
+            color: #f0e6d2;
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            color: #a09b8c;
+        }
+        
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+            color: #a09b8c;
+        }
+        
+        .highlight {
+            color: #f0e6d2;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #463714;
+            color: #a09b8c;
+            font-size: 0.9rem;
+        }
+        
+        .decorative-border {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #c8aa6e, transparent);
+            margin: 20px 0;
+        }
+        
+        .learning-note {
+            background: rgba(200, 170, 110, 0.1);
+            border: 1px solid #c8aa6e;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Riot Vanguard">
-        <span class="logo-badge" title="Vanguard">★</span>
-    </div>
-
-    <h2 class="page-title">K/DA - GALERIA AHRI</h2>
-
-    <div class="cabecalho">
-        <a href="index.html" title="Home">
-            <span class="material-symbols-outlined">home</span>
-        </a>
-
-        <a href="Galeria.html" title="Galeria">
-            <span class="material-symbols-outlined">photo_library</span>
-        </a>
-
-        <a href="music.html" title="Music">
-            <span class="material-symbols-outlined">music_note</span>
-        </a>
-
-        <a href="curriculo.html" title="Currículo">
-            <span class="material-symbols-outlined">work</span>
-        </a>
-
-        <a href="canal.html" title="Canal">
-            <span class="material-symbols-outlined">play_circle</span>
-        </a>
-        <a href="https://open.spotify.com" title="Spotify" target="_blank">
-            <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
-        </a>
-    </div>
-
     <div class="container">
-        <div class="gallery-grid">
-            <div class="card">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/041/760/396/large/yangyang-ren-kda-ahri.jpg?1632490595" alt="K/DA Ahri - Artwork">
-                <div class="card-content">
-                    <div class="card-title">K/DA Ahri</div>
-                    <div class="card-desc">Ahri é a líder carismática do grupo musical fictício K/DA no universo de League of Legends. Uma vastaya transformada em idol de sucesso.</div>
-                    <div class="card-shop">
-                        <h3>Merch Ahri</h3>
-                        <ul>
-                            <li>
-                                <span>Poster Ahri - R$ 19,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Chaveiro Ahri - R$ 14,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Camisa K/DA - R$ 39,90</span>
-                                <button>Comprar</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/1590432226649-HB9D8B0QDNVLJ3BBYCBO/2XKO_Social_400x400_ProfilePicture_AHRI_A.png?format=1500w" alt="KDA Ahri - Visual">
-                <div class="card-content">
-                    <div class="card-title">Ahri - K/DA ALL OUT</div>
-                    <div class="card-desc">Personagem icônica da série K/DA, representando a fusão perfeita entre poder místico e performance artística em um único corpo.</div>
-                    <div class="card-shop">
-                        <h3>Colecionáveis</h3>
-                        <ul>
-                            <li>
-                                <span>Action Figure - R$ 79,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Estatueta PVC - R$ 59,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Box Set Completo - R$ 149,90</span>
-                                <button>Comprar</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.squarespace-cdn.com/content/v1/6068ef070a68663443dcfe48/1590432226752-5KVMJPNM7J6WE8TUVL5I/League_of_Legends_K_DA_Ahri_HD_Wallpaper_by_Alex_Chow.jpg?format=1500w" alt="K/DA Ahri - Wallpaper">
-                <div class="card-content">
-                    <div class="card-title">K/DA Ahri - Concert</div>
-                    <div class="card-desc">Visuais incríveis de Ahri durante apresentações do K/DA. A energia e carisma da rainha das ilusões em seu auge performance.</div>
-                    <div class="card-shop">
-                        <h3>Digital</h3>
-                        <ul>
-                            <li>
-                                <span>Wallpaper 4K - R$ 9,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Screensaver Pack - R$ 19,90</span>
-                                <button>Comprar</button>
-                            </li>
-                            <li>
-                                <span>Avatar Bundle - R$ 14,90</span>
-                                <button>Comprar</button>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="banner-container">
+            <div class="banner-overlay">
+                <div class="banner-text">
+                    <h1> The Spike - Ahri</h1>
                 </div>
             </div>
         </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Termos de Serviço</h2>
+                
+                <h3>1. Aceitação dos Termos</h3>
+                <p>Ao acessar e utilizar este site pessoal, você concorda em cumprir e estar vinculado aos seguintes termos e condições de uso.</p>
+                
+                <h3>2. Uso Permitido</h3>
+                <p>Este site é destinado exclusivamente para uso pessoal e não comercial. Você concorda em não:</p>
+                <ul>
+                    <li>Utilizar o site para qualquer finalidade ilegal ou não autorizada;</li>
+                    <li>Violar qualquer lei local, estadual, nacional ou internacional aplicável;</li>
+                    <li>Coletar ou rastrear informações pessoais de outros usuários;</li>
+                    <li>Tentar obter acesso não autorizado a qualquer parte do site.</li>
+                </ul>
+                
+                <h3>3. Propriedade Intelectual</h3>
+                <p>Todo o conteúdo presente neste site, incluindo mas não se limitando a textos, gráficos, logotipos, ícones, imagens, clipes de áudio e vídeo, é de propriedade do proprietário do site ou de seus licenciadores e está protegido por leis de direitos autorais.</p>
+                
+                <h3>4. Isenção de Responsabilidade</h3>
+                <p>O site é fornecido "no estado em que se encontra". O proprietário não oferece garantias de qualquer tipo, expressas ou implícitas, quanto ao funcionamento do site ou às informações, conteúdo ou materiais nele incluídos.</p>
+                
+                <h3>5. Modificações</h3>
+                <p>Estes termos de serviço podem ser atualizados periodicamente. Recomendamos que você revise esta página regularmente para estar ciente de quaisquer alterações.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Política de Privacidade</h2>
+                
+                <h3>1. Coleta de Informações</h3>
+                <p><span class="highlight">Este site não coleta, armazena ou processa quaisquer dados pessoais dos visitantes.</span> Não utilizamos cookies, rastreadores ou qualquer outra tecnologia de coleta de dados.</p>
+                
+                <h3>2. Uso de Informações</h3>
+                <p>Como não coletamos informações, não há uso de dados pessoais para qualquer finalidade.</p>
+                
+                <h3>3. Compartilhamento de Informações</h3>
+                <p>Não compartilhamos informações com terceiros, pois não coletamos nenhuma informação em primeiro lugar.</p>
+                
+                <h3>4. Conteúdo Incorporado</h3>
+                <p>Este site pode incorporar conteúdo de outros sites (como vídeos do YouTube). Esses sites podem coletar dados sobre você, usar cookies, incorporar rastreadores adicionais de terceiros e monitorar sua interação com esse conteúdo incorporado.</p>
+                
+                <h3>5. Seus Direitos</h3>
+                <p>Como não coletamos dados, não há necessidade de solicitar acesso, correção ou exclusão de informações pessoais.</p>
+                
+                <div class="learning-note">
+                    <p>Este site foi criado por um fã que está aprendendo desenvolvimento web. É um projeto pessoal sem fins comerciais.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Spike - Ahri. Todos os direitos reservados.</p>
+            <p>Este site é apenas para fins pessoais e não está afiliado à Riot Games ou League of Legends.</p>
+        </div>
     </div>
-
-    <div class="back-button">
-        <button onclick="window.location.href='index.html'">← Voltar ao Início</button>
-    </div>
-
-    <footer style="text-align: center; padding: 20px; margin-top: 30px; background: #5b007c; color: #aaa; font-size: 0.9rem; border-radius: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
-        <p>K/DA Ahri Galeria &copy; 2025 - Todos os direitos reservados. Baseado no universo de League of Legends da Riot Games</p>
-    </footer>
 </body>
 </html>

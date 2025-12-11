@@ -83,6 +83,11 @@
             justify-content: center;
         }
         
+        /* garante que os Material Symbols usem a fonte correta (evita mostrar texto em vez do ícone) */
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined' !important;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         /* pequeno logo do canal dentro da logo principal (fallback visual) */
         .channel-logo {
             position: absolute;
@@ -169,10 +174,6 @@
             display: inline-block;
             vertical-align: middle;
             border: none;
-        }
-        
-        .material-symbols-outlined {
-            font-size: 24px;
         }
         
         .footer {
@@ -278,8 +279,7 @@
         <div class="logo-container">
             <div class="logo">
                 <!-- usar mesma logo principal do site (mesma do index) -->
-                <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Logo principal" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23ffb347%22/%3E%3C/svg%3E'">
-                <!-- pequeno ícone do canal (visível dentro da logo) -->
+                <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Logo principal" onerror="this.src='https://pbs.twimg.com/media/GJchFroW0AEvTBz.png'">
                 <img class="channel-logo" src="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" alt="Logo do canal" onerror="this.style.display='none'">
                  <span class="logo-badge" title="Ahri">★</span>
              </div>

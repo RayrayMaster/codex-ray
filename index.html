@@ -284,7 +284,13 @@
             max-width: 1200px;
             margin: 30px auto;
         }
-        
+
+        /* garante que Material Symbols apareçam como ícones e não como texto */
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined' !important;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
         @media (max-width: 768px) {
             .profile-section {
                 flex-direction: column;

@@ -1,93 +1,283 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Termos de Uso - The Spike</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - The Spike</title>
 
-<!-- Material Symbols -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYL9PNHMLB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RYL9PNHMLB');
+    </script>
 
-<style>
-/* Cabeçalho / layout básico (mesma base das outras páginas) */
-body { background: linear-gradient(135deg, #18183a 60%, #400557 100%); color:#e0e0e0; font-family: Arial, sans-serif; margin:0; padding:20px; }
-.container { max-width:800px; margin:0 auto; }
-.logo { width:110px; height:110px; background:#18183a; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:12px auto; border:4px solid #ffb347; position:relative; }
-.logo img { width:96px; height:96px; border-radius:50%; object-fit:cover; border:3px solid #fff; }
-.logo-badge { position:absolute; top:-8px; right:-8px; background:#18183a; color:#ffb347; border:2px solid #ffb347; border-radius:10px; padding:2px 6px; font-size:14px; display:inline-flex; align-items:center; justify-content:center; }
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
-.cabecalho {
-    text-align:center;
-    font-family: Arial, sans-serif;
-    margin: 0 auto 24px auto;
-    border: 2px solid #ffb347;
-    border-radius: 10px;
-    padding: 12px 0;
-    background: #18183a;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    max-width: 800px;
-}
-.cabecalho a {
-    color: #ffb347;
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: bold;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.cabecalho a:hover { color:#fff; transform:scale(1.05); }
-.material-symbols-outlined { font-size:24px; vertical-align:middle; }
-.spotify-icon { width:28px; height:28px; object-fit:contain; border:none; display:inline-block; vertical-align:middle; }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.termos-box { background:#23234a; padding:20px; border-radius:12px; border:2px solid #ffb347; color:#e0e0e0; }
-</style>
+        body {
+            background: linear-gradient(135deg, #18183a 60%, #400557 100%);
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            background-color: #18183a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            margin: 24px auto 8px auto;
+            border: 4px solid #ffb347;
+            position: relative;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+        }
+
+        .logo-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #18183a;
+            color: #ffb347;
+            border: 2px solid #ffb347;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 14px;
+            line-height: 1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-title {
+            text-align: center;
+            color: #ffb347;
+            font-family: Arial, sans-serif;
+            margin: 10px 0 20px;
+            letter-spacing: 1px;
+            font-size: 1.8em;
+        }
+
+        .cabecalho {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0 auto 24px auto;
+            border: 2px solid #ffb347;
+            border-radius: 10px;
+            padding: 12px 0;
+            background: #18183a;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .cabecalho a {
+            color: #ffb347;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cabecalho a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .material-symbols-outlined {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+            object-fit: contain;
+        }
+
+        .termos-container {
+            background: #23234a;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            padding: 32px 24px;
+            border: 2px solid #ffb347;
+            margin-bottom: 30px;
+        }
+
+        .termos-container h1 {
+            color: #ffb347;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            letter-spacing: 1px;
+        }
+
+        .termos-container p {
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-size: 1.08em;
+            margin-bottom: 16px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            color: #a0a0c0;
+            font-size: 0.9em;
+            border-top: 1px solid #333355;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+
+            .page-title {
+                font-size: 1.4rem;
+            }
+
+            .cabecalho a {
+                margin: 0 12px;
+            }
+
+            .termos-container {
+                padding: 24px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 90px;
+                height: 90px;
+                margin: 8px auto;
+            }
+
+            .page-title {
+                font-size: 1.2rem;
+                margin: 8px 0 16px 0;
+            }
+
+            .cabecalho {
+                padding: 8px 0;
+                margin: 0 auto 16px auto;
+            }
+
+            .cabecalho a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+
+            .termos-container {
+                padding: 20px 12px;
+                border-radius: 12px;
+            }
+
+            .termos-container h1 {
+                font-size: 1.4em;
+            }
+
+            .termos-container p {
+                font-size: 0.95em;
+            }
+
+            .footer {
+                font-size: 0.8em;
+                padding: 12px;
+            }
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" />
 </head>
 <body>
-<div class="container">
+    <div class="container">
+        <div class="logo">
+            <img src="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" alt="Ícone de Clove">
+            <span class="logo-badge" title="Termos">★</span>
+        </div>
 
-    <div class="logo">
-        <img src="https://pbs.twimg.com/media/GJchFroW0AEvTBz.png" alt="Ícone de Clove">
-        <span class="logo-badge">★</span>
+        <h1 class="page-title">TERMOS DE USO</h1>
+
+        <div class="cabecalho">
+            <a href="index.html" title="Home">
+                <span class="material-symbols-outlined">home_app_logo</span>
+            </a>
+
+            <a href="Galeria.html" title="Galeria">
+                <span class="material-symbols-outlined">privacy_tip</span>
+            </a>
+
+            <a href="music.html" title="Music">
+                <span class="material-symbols-outlined">music_note</span>
+            </a>
+
+            <a href="curriculo.html" title="Currículo">
+                <span class="material-symbols-outlined">work</span>
+            </a>
+
+            <a href="canal.html" title="Canal">
+                <span class="material-symbols-outlined">play_circle</span>
+            </a>
+
+            <a href="https://open.spotify.com" title="Spotify" target="_blank">
+                <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" />
+            </a>
+        </div>
+
+        <div class="termos-container">
+            <h1>Termos de Uso</h1>
+            <p>
+                Bem-vindo ao The Spike. Ao acessar e usar este site, você concorda em estar vinculado aos termos e condições estabelecidos aqui.
+            </p>
+            <p>
+                Se você não concordar com qualquer parte destes termos, por favor, não use este site.
+            </p>
+            <p>
+                <!-- Insira aqui o conteúdo completo dos termos de uso -->
+                Conteúdo dos termos de uso será adicionado aqui.
+            </p>
+        </div>
+
+        <div class="footer">
+            The Spike &copy; 2025 - Todos os direitos reservados.
+        </div>
     </div>
-
-    <!-- cabeçalho padrão (segundo ícone = privacy_tip) -->
-    <div class="cabecalho">
-        <a href="index.html" title="Home">
-            <span class="material-symbols-outlined">home_app_logo</span>
-        </a>
-
-        <a href="Galeria.html" title="Galeria">
-            <span class="material-symbols-outlined">privacy_tip</span>
-        </a>
-
-        <a href="music.html" title="Music">
-            <span class="material-symbols-outlined">music_note</span>
-        </a>
-
-        <a href="curriculo.html" title="Currículo">
-            <span class="material-symbols-outlined">work</span>
-        </a>
-
-        <a href="canal.html" title="Canal">
-            <span class="material-symbols-outlined">play_circle</span>
-        </a>
-
-        <a href="https://open.spotify.com" title="Spotify" target="_blank" aria-label="Spotify">
-            <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" />
-        </a>
-    </div>
-
-    <div class="termos-box">
-        <h1 style="color:#ffb347; margin-bottom:12px;">Termos de Uso</h1>
-        <p style="line-height:1.6;">
-            <!-- Substitua pelo conteúdo real dos termos -->
-            Aqui vão os termos de uso do site.
-        </p>
-    </div>
-
-</div>
 </body>
 </html>

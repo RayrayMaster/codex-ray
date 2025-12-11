@@ -8,8 +8,8 @@
     <!-- Favicon com imagem da Ahri -->
     <link rel="icon" href="https://lol-skin.weblog.vc/img/wallpaper/tiles/Ahri_0.jpg?1762269919" />
     
-    <!-- Material Symbols -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=privacy_tip" />
+    <!-- Material Symbols CORRIGIDO -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -77,14 +77,14 @@
             justify-content: center;
         }
 
-        /* Cabeçalho - replicado do original */
+        /* Cabeçalho - MAIS COMPACTO */
         .cabecalho {
             text-align: center;
             font-family: Arial, sans-serif;
             margin: 0 auto 24px auto;
             border: 2px solid var(--accent);
             border-radius: 10px;
-            padding: 12px 0;
+            padding: 10px 0;
             background: var(--bg-dark);
             color: #fff;
             max-width: 500px;
@@ -94,20 +94,22 @@
         .cabecalho a {
             color: var(--accent);
             text-decoration: none;
-            margin: 0 18px;
+            margin: 0 10px; /* REDUZIDO de 18px para 10px */
             font-weight: bold;
-            transition: color 0.2s;
+            transition: all 0.2s;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            padding: 6px 8px;
+            border-radius: 5px;
         }
         .cabecalho a:hover {
             color: #fff;
+            background: rgba(255, 179, 71, 0.15);
         }
 
         .cabecalho .material-symbols-outlined {
-            font-size: 24px;
-            vertical-align: middle;
+            font-size: 22px; /* REDUZIDO de 24px para 22px */
             color: var(--accent);
             transition: color 0.2s;
             line-height: 1;
@@ -121,19 +123,16 @@
         }
 
         .spotify-icon {
-            width: 28px;
-            height: 28px;
-            max-width: 28px;
-            max-height: 28px;
+            width: 22px; /* REDUZIDO de 28px para 22px */
+            height: 22px; /* REDUZIDO de 28px para 22px */
             display: inline-block;
             object-fit: contain;
             border: none;
-            margin-left: 6px;
+            margin-left: 4px;
             vertical-align: middle;
-            border-radius: 6px;
+            border-radius: 4px;
             background: var(--bg-dark);
             border: 2px solid var(--accent);
-            transform: translateY(-2px);
         }
         
         .page-title {
@@ -334,7 +333,7 @@
             margin-right: auto;
         }
         
-        /* Responsividade */
+        /* RESPONSIVIDADE AJUSTADA */
         @media (max-width: 768px) {
             .page-title {
                 font-size: 1.6rem;
@@ -361,7 +360,17 @@
             }
             
             .cabecalho a {
-                margin: 0 12px;
+                margin: 0 8px; /* Ainda mais compacto em mobile */
+                padding: 4px 6px;
+            }
+            
+            .cabecalho .material-symbols-outlined {
+                font-size: 20px;
+            }
+            
+            .spotify-icon {
+                width: 20px;
+                height: 20px;
             }
             
             .container {
@@ -379,6 +388,17 @@
             
             .info-card {
                 min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .cabecalho a {
+                margin: 0 6px;
+                font-size: 0.9rem;
+            }
+            
+            .cabecalho .material-symbols-outlined {
+                font-size: 18px;
             }
         }
         
@@ -403,8 +423,17 @@
             }
             
             .cabecalho a {
-                margin: 0 8px;
-                font-size: 0.9rem;
+                margin: 0 4px; /* Mínimo em telas muito pequenas */
+                padding: 3px 5px;
+            }
+            
+            .cabecalho .material-symbols-outlined {
+                font-size: 16px;
+            }
+            
+            .spotify-icon {
+                width: 18px;
+                height: 18px;
             }
             
             .video-container iframe {

@@ -183,11 +183,104 @@
         .material-symbols-outlined {
             font-size: 1.5rem;
             margin-right: 8px;
+            font-family: 'Material Symbols Outlined' !important;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Logo estilizado (padrão) */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            background-color: #0a1428;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 12px auto;
+            border: 4px solid #c8aa6e;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo img {
+            border-radius: 50%;
+            border: 3px solid #fff;
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+        }
+
+        .logo-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #0a1428;
+            color: #c8aa6e;
+            border: 2px solid #c8aa6e;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 14px;
+            line-height: 1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Cabeçalho (padronizado) */
+        .cabecalho {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0 auto 24px auto;
+            border: 2px solid #c8aa6e;
+            border-radius: 10px;
+            padding: 12px 0;
+            background: rgba(10, 20, 40, 0.7);
+            color: #f0e6d2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            max-width: 900px;
+        }
+
+        .cabecalho a {
+            color: #c8aa6e;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cabecalho a:hover {
+            color: #f0e6d2;
+        }
+
+        .spotify-icon {
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+            border: none;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- LOGO (padrão em todas as páginas) -->
+        <div class="logo-section">
+            <div class="logo">
+                <img src="https://hasagi.gg/wp-content/uploads/2024/01/Riot_Vanguard.jpg" alt="Logo principal">
+                <span class="logo-badge" title="Ahri">★</span>
+            </div>
+        </div>
+        <!-- CABEÇALHO (padronizado em todas as páginas) -->
         <div class="cabecalho">
             <a href="index.html" title="Home">
                 <span class="material-symbols-outlined">home_app_logo</span>
@@ -197,8 +290,20 @@
                 <span class="material-symbols-outlined">privacy_tip</span>
             </a>
 
-            <a href="termos.html" title="Termos">
-                <span class="material-symbols-outlined">privacy_tip</span>
+            <a href="music.html" title="Music">
+                <span class="material-symbols-outlined">music_note</span>
+            </a>
+
+            <a href="curriculo.html" title="Currículo">
+                <span class="material-symbols-outlined">work</span>
+            </a>
+
+            <a href="canal.html" title="Canal">
+                <span class="material-symbols-outlined">play_circle</span>
+            </a>
+
+            <a href="https://open.spotify.com" title="Spotify" target="_blank">
+                <img class="spotify-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify" />
             </a>
         </div>
         
